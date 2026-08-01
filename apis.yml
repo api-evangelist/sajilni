@@ -1,7 +1,26 @@
 aid: sajilni
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/sajilni.png
 name: Sajilni
-description: Sajilni is a company surfaced as a portfolio company of 500-global and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: Sajilni is a Middle East / MENA event ticketing and event-management platform
+  built for organizers who care about data and branding. Organizers use it to create events,
+  design branded registration pages, sell and scan tickets, manage seating and booths, run
+  promo/discount codes, collect payments, and analyze attendee data. The consumer-facing site
+  is sajilni.com with an organizer/business portal at business.sajilni.com; the platform is a
+  Java/Spring web application with an internal authentication service at auth.sajilni.com. As of
+  this enrichment pass Sajilni publishes no public API, developer portal, OpenAPI, or webhook
+  surface, so this profile captures the company identity, commercial pages, and a live
+  domain-security probe rather than API artifacts.
 url: https://raw.githubusercontent.com/api-evangelist/sajilni/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,9 +30,16 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
+- Events
+- Event Management
+- Ticketing
+- Event Registration
+- Payments
+- MENA
+- Middle East
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -21,5 +47,26 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/sajilni-domain-security.yml
 - type: Website
   url: https://sajilni.com
+- type: Portal
+  url: https://business.sajilni.com
+- type: Pricing
+  url: https://business.sajilni.com/pricing/
+- type: SignUp
+  url: https://business.sajilni.com/contact
+- type: Login
+  url: https://www.sajilni.com/user/login.html
+- type: Support
+  url: https://business.sajilni.com/contact/
+- type: TermsOfService
+  url: https://business.sajilni.com/terms-of-service/
+- type: PrivacyPolicy
+  url: https://business.sajilni.com/privacy-policy/
+x-enrichment:
+  date: '2026-07-21'
+  status: minimal
+  artifacts_added: 1
+  pass: local-v1
